@@ -31,7 +31,6 @@ main{
   }
 
   .juanometro::-webkit-slider-thumb {
-    
     background: url(../imgs/4df03279-3e27-4454-bc5d-3d13977b9673-removebg-preview.png);
     cursor: pointer;
   }
