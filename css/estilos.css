@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+main{
+    margin: 20px;
+}
+
+.slidercontainer {
+    display: flex;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.juanometro {
+    -webkit-appearance: none;
+    background: linear-gradient(90deg,rgba(224, 0, 0, 1) 16%, rgba(235, 222, 42, 1) 51%, rgba(139, 237, 83, 1) 93%);;
+    display: flex;
+    width: 80%;
+    height: 80px;
+    outline: none;
+    opacity: 0.75;
+    -webkit-transition: .2s;
+    transition: opacity .3s;
+}
+
+.juanometro:hover {
+    opacity: 1;
+  }
+
+  .juanometro::-webkit-slider-thumb {
+    
+    background: url(../imgs/4df03279-3e27-4454-bc5d-3d13977b9673-removebg-preview.png);
+    cursor: pointer;
+  }
