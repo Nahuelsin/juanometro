@@ -8,20 +8,43 @@
 </head>
 <body>
     <header>
-
+        <p>Juanómetro - Medidor de Ira</p>
     </header>
 
     <main>
         <section class="slider">
+            <form id="myForm">
                 <div class="slidercontainer">
-                    <input type="range" class="juanometro" id="juanometro" name="juanometro" id="juanometro" min="1" max="10" value="5">    
+                    <input type="range" class="juanometro" id="juanometro" name="juanometro" id="juanometro" min="1" max="100" value="50">    
                 </div>
-                <p>Nivel de enojo: <span id="demo"></span></p>  
-                <button class="input">Actualizar</button>
+                <p>Enojación: <span id="demo" class="range"></span>%</p>  
+                <button type="submit" class="input" id="btn">Actualizar</button>
+            </form>
         </section>
 
     </main>
     
+    <script>
+        const slider = document.getElementById("juanometro");
+        const output = document.getElementById("demo");
+        const form = document.getElementById("myForm");
+        const savedValue = localStorage.getItem("juanometro");
+    if (savedValue !== null) {
+        slider.value = savedValue;
+    }
+
+    output.textContent = slider.value;
+
+    slider.oninput = function () {
+        output.textContent = this.value;
+    };
+ 
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); 
+        localStorage.setItem("juanometro", slider.value);
+        alert("Valor guardado " + slider.value + "%");
+    });
+    </script>
 
     <script src="/js/code.js"></script>
 </body>
