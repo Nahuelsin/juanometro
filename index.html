@@ -19,7 +19,14 @@
                 <div class="slidercontainer">
                     <input type="range" class="juanometro" id="juanometro" name="juanometro" id="juanometro" min="1" max="100" value="50">    
                 </div>
-                <p>Enojación: <span id="demo" class="range"> </span>%</p>  
+                <datalist id="values">
+                    <option value="0" label="-YUPIII"></option>
+                    <option value="25" label="-Positiva"></option>
+                    <option value="50" label="-Meh"></option>
+                    <option value="75" label="-MmmM"></option>
+                    <option value="100" label="-SUPERENOJADA"></option>
+                  </datalist>
+                <p>Enojación: <span id="demo" class="range"></span>%</p>  
                 <button type="submit" class="input" id="btn">Actualizar</button>
             </form>
         </section>

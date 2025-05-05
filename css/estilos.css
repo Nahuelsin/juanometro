@@ -26,11 +26,12 @@ header{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100px;
+    height: 125px;
     background-color: rgba(37, 254, 243, 0.311);
     border-end-end-radius: 30px;
 }
-p{
+header p{
+    text-indent: 10%;
     font-family: "Boldonse", system-ui;
     font-weight: 400;
     font-size: 30px;
@@ -41,7 +42,7 @@ p{
 }
 
   .slider p {
-    margin-block-start: 70px;
+    padding-inline: 100px;
     font-family: "Boldonse", system-ui;
     font-weight: 400;
     font-size: 30px;
@@ -52,7 +53,7 @@ p{
   }
   
   .slider .input {
-   margin-block-start: 25px;
+   margin-block-start: 40px;
    border-radius: 50px;
    height: 60px;
    width: 200px;
@@ -81,12 +82,13 @@ p{
 }
 
 .juanometro {
+    z-index: 1;
     border: 3px solid white;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     border-radius: 10px;
     -webkit-appearance: none;
     appearance: none;
-    background: linear-gradient(90deg,rgba(235, 0, 0, 1) 16%, rgba(255, 238, 3, 1) 51%, rgba(111, 255, 28, 1) 93%);
+    background: linear-gradient(264deg,rgba(235, 0, 0, 1) 16%, rgba(255, 238, 3, 1) 51%, rgba(111, 255, 28, 1) 93%);
     display: flex;
     width: 80%;
     height: 80px;
@@ -110,12 +112,27 @@ p{
     background-repeat: no-repeat;
     cursor: pointer;
   }
+  datalist {
+    display: flex;
+    color: white;
+    font-family: "Boldonse", system-ui;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-inline-start: 10px;
+    writing-mode: vertical-lr;
+    width: 60%;
+  }
+  
+  option {
+    padding: 0;
+  }
+  
 
 /* media querys */
 
   @media screen and (max-width:768px) {
     body{
-      height: 100vh;
+      height:100vh;
       background-image: url(../imgs/fondo.gif);
       background-repeat: no-repeat;
       background-size: cover;
@@ -126,34 +143,68 @@ p{
     background-color: rgba(37, 232, 254, 0.47);
     border-end-end-radius: 10px;
   }
+  .slidercontainer{
+    margin-block-start: 50px;
+  }
 
-  p{
+  header p{
     display: flex   ;
     text-indent: 10%;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 25px;
     font-style: normal;
     font-weight: bold;
     text-shadow: 4px 2px 2px black;
   }
   .slider p {
-    margin-block-start: 100px;
+    padding-inline: 5px;
+    margin-block-start: 50px;
     font-family: "Boldonse", system-ui;
-    font-size: 20px;
+    font-size: 25px;
     font-style: normal;
     color: white;
     font-weight: bold;
     text-shadow: 4px 2px 2px black;
   }
-  #demo{
-    padding-inline-start: 20px;
-  }
   .slider .input{
-    margin-block-start: 60px;
+    margin-block-start: 30px;
     height: 50px;
     width: 150px;
   }
+
+  .juanometro {
+    border: 3px solid white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(264deg,rgba(235, 0, 0, 1) 16%, rgba(255, 238, 3, 1) 51%, rgba(111, 255, 28, 1) 93%);
+    display: flex;
+    width: 100%;
+    height: 60px;
+    outline: none;
+    opacity: 0.95;
+    -webkit-transition: .2s;
+    transition: opacity .3s;
+}
+.juanometro::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 140px;
+  width: 130px;
+  background: url(../imgs/ba28dace-c059-45ea-b1d5-fe07c9e94904-removebg-preview.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+datalist {
+  font-family: "Boldonse", system-ui;
+  padding-inline-start: 5px;
+  writing-mode: vertical-lr;
+  width: 80%;
+}
+
   }
 
   
